@@ -16,8 +16,12 @@
         }
       }
     </script>
-    <script type="module">
-      import("root-config");
+    <script>
+      if (location.hostname === "localhost") {
+        import("/src/root.ts");
+      } else {
+        System.import("root-config");
+      }
     </script>
   </body>
 </html>
