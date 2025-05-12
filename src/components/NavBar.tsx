@@ -6,7 +6,7 @@ const Nav = styled.nav`
   padding: 1rem;
   background: #f3f3f3;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   width: 100%;
 `;
