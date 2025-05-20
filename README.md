@@ -25,7 +25,7 @@ Each microfrontend focuses on different competencies, such as:
 
 - **React** (Shell + MFEs)
 - **TypeScript**
-- **Single SPA** + **Nx Monorepo**
+- **Single SPA**
 - **Emotion** for CSS-in-JS styling
 - **Tolgee** for i18n (internationalization)
 - **Node.js** + **Express/GraphQL** (backend)
@@ -42,9 +42,9 @@ To run this shell locally:
 ```bash
 git clone https://github.com/your-username/portfolio-shell.git
 cd portfolio-shell
-npm install
-npm start
+npm i
+npm run dev
 
 🧑‍💻 Author
-Made with ❤️ by Iván Tisera – Fullstack Engineer
+Made with ❤️ by Iván Tisera – Software Engineer
 ```

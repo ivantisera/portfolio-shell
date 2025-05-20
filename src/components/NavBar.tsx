@@ -1,4 +1,4 @@
-import { useTolgee } from "@tolgee/react";
+import { useTranslate } from "@tolgee/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
 
@@ -35,18 +35,19 @@ const LanguageSwitcher = styled.div`
 `;
 
 export const Navbar = () => {
-  const tolgee = useTolgee();
-  const [currentLang, setCurrentLang] = useState(tolgee.getLanguage());
+  const [currentLang, setCurrentLang] = useState(window.tolgee.getLanguage());
 
   const switchLanguage = (lang: string) => {
     if (lang !== currentLang) {
-      tolgee.changeLanguage(lang);
+      window.tolgee.changeLanguage(lang);
       setCurrentLang(lang);
     }
   };
 
+  const { t } = useTranslate();
   return (
     <Nav aria-label="Main navigation">
+      <p>{t("my_name")}</p>
       <LanguageSwitcher role="group" aria-label="Language switcher">
         {["en", "es"].map((lang) => (
           <LanguageButton
